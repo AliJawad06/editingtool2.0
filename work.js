@@ -20,6 +20,7 @@ var time = document.getElementById("time");
 
     }
     if(bool==true){
+    seconds = seconds - 1;
     time.innerHTML = (hours.toString() + ":" + minutes.toString() + ":" + seconds.toString());
     }
 }
@@ -55,7 +56,7 @@ if(annyang){
     console.log("annyang");
     var begCmnd= {"Mark" : function(){
         var ne = document.createElement("p");
-        ne.innerHTML = "Start: " +  document.getElementById("time").textContent;
+        ne.innerHTML = "Mark: " +  document.getElementById("time").textContent;
         body.appendChild(ne);
     }};
 
