@@ -20,7 +20,6 @@ var time = document.getElementById("time");
 
     }
     if(bool==true){
-    seconds = seconds - 1;
     time.innerHTML = (hours.toString() + ":" + minutes.toString() + ":" + seconds.toString());
     }
 }
