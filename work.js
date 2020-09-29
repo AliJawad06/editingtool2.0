@@ -41,7 +41,8 @@ window.addEventListener("keypress",function(g){
   if (letter=="m"){
     var ne = document.createElement("p");
     var temp1 = document.getElementById("time").textContent;
-    ne.innerHTML = "Mark:" + temp1;
+    console.log(temp1 + "This is tmep2");
+    ne.innerHTML = "Mark: " + temp1;
     sessionStorage.setItem(sessionStorage.length, convert(temp1));
     body.appendChild(ne);
   }
