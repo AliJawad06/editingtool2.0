@@ -94,8 +94,15 @@ annyang.start({continous : true});
         else{
             sum = parseInt(firstCon)*60 + parseInt(secondP);
         }
-        return sum; 
+        return (sum*1000)-1000; 
     }
+
+
+
+
+
+
+
 
 
 
