@@ -80,6 +80,7 @@ annyang.start({continous : true});
 }
 
     function convert(x){
+        console.log(x);
         var first = x.substring(0,x.indexOf(":"));
         var secondP = x.substring(x.indexOf(":") + 1, x.length);
         //console.log(secondP);
