@@ -82,16 +82,16 @@ annyang.start({continous : true});
 
     function convert(x){
         console.log(x);
-        var first = x.substring(0,x.indexOf(":"));
+        var firstCon = x.substring(0,x.indexOf(":"));
         var secondP = x.substring(x.indexOf(":") + 1, x.length);
         //console.log(secondP);
         var third = 0; 
         var sum;
         if (secondP.indexOf(":") != -1){
-            sum = (parseInt(first)*3600) + parseInt((secondP.substring(0,secondP.indexOf(":")))*60) + parseInt(secondP.substring(secondP.indexOf(":") + 1, secondP.length));                                    
+            sum = (parseInt(firstCon)*3600) + parseInt((secondP.substring(0,secondP.indexOf(":")))*60) + parseInt(secondP.substring(secondP.indexOf(":") + 1, secondP.length));                                    
         }
         else{
-            sum = parseInt(first)*60 + parseInt(secondP);
+            sum = parseInt(firstCon)*60 + parseInt(secondP);
         }
         return sum; 
     }
