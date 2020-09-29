@@ -43,6 +43,7 @@ window.addEventListener("keypress",function(g){
     var temp1 = document.getElementById("time").textContent;
     console.log(temp1 + "This is tmep2");
     ne.innerHTML = "Mark: " + temp1;
+    console.log(convert(temp1));
     sessionStorage.setItem(sessionStorage.length, convert(temp1));
     body.appendChild(ne);
   }
