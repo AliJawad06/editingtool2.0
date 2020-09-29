@@ -29,6 +29,7 @@ startBtn.addEventListener("click",function(){
 });
 stopBtn.addEventListener("click",function(){
     bool = false;
+    console.log("done");
     for(var i = 0; i < sessionStorage.length;i++){
         console.log(sessionStorage.getItem(i) + ",");
     }
@@ -60,7 +61,7 @@ if(annyang){
         var ne = document.createElement("p");
         var temp = document.getElementById("time").textContent;
         ne.innerHTML = "Mark: " + temp;
-        sessionStorage.setItem(sessionStorage.length, convert(temp));
+        sessionStorage.setItem(sessionStorage.length+1, convert(temp));
         body.appendChild(ne);
     }};
 
