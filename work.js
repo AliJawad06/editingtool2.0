@@ -40,7 +40,9 @@ window.addEventListener("keypress",function(g){
   var letter = g.key;
   if (letter=="m"){
     var ne = document.createElement("p");
-    ne.innerHTML = "Mark :" + document.getElementById("time").textContent;
+    var temp1 = document.getElementById("time").textContent;
+    ne.innerHTML = "Mark:" + temp1;
+    sessionStorage.setItem(sessionStorage.length, convert(temp1));
     body.appendChild(ne);
   }
   if(letter == "`"){
@@ -61,7 +63,7 @@ if(annyang){
         var ne = document.createElement("p");
         var temp = document.getElementById("time").textContent;
         ne.innerHTML = "Mark: " + temp;
-        sessionStorage.setItem(sessionStorage.length+1, convert(temp));
+        sessionStorage.setItem(sessionStorage.length, convert(temp));
         body.appendChild(ne);
     }};
 
