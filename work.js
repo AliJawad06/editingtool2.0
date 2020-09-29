@@ -30,6 +30,9 @@ startBtn.addEventListener("click",function(){
 });
 stopBtn.addEventListener("click",function(){
     bool = false;
+    for(var i = 0; i < sessionStorage.length;i++){
+        console.log(sessionStorage.getItem(i) + ",");
+    }
 });
 
 var body = document.body;
@@ -56,7 +59,9 @@ if(annyang){
     console.log("annyang");
     var begCmnd= {"Mark" : function(){
         var ne = document.createElement("p");
-        ne.innerHTML = "Mark: " +  document.getElementById("time").textContent;
+        var temp = document.getElementById("time").textContent;
+        ne.innerHTML = "Mark: " + temp;
+        sessionStorage.setItem(sessionStorage.length, convert(temp));
         body.appendChild(ne);
     }};
 
@@ -72,6 +77,20 @@ annyang.start({continous : true});
 
 }
 
+    function convert(x){
+        var first = x.substring(0,x.indexOf(":"));
+        var secondP = x.substring(x.indexOf(":") + 1, x.length);
+        //console.log(secondP);
+        var third = 0; 
+        var sum;
+        if (secondP.indexOf(":") != -1){
+            sum = (parseInt(first)*3600) + parseInt((secondP.substring(0,secondP.indexOf(":")))*60) + parseInt(secondP.substring(secondP.indexOf(":") + 1, secondP.length));                                    
+        }
+        else{
+            sum = parseInt(first)*60 + parseInt(secondP);
+        }
+        return sum; 
+    }
 
 
 
